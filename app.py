@@ -32,6 +32,11 @@ response_to_model_mapping = {
         "c": ["Flex Model", "Enriched Virtual"]  # Rarely
     },
     "question_7": {  # How important is flexibility?
+        "a": ["Enriched Virtual", "Flex Model "],  # Gaining theoretical knowledge
+        "b": ["Lab Rotation", "Flipped Classroom"],  # Developing practical skills
+        "c": ["A La Carte", "Station Rotation"]  # Preparing for exams or certifications
+    },
+    "question_8": {  # How important is flexibility?
         "a": ["Flex Model", "A La Carte"],  # Gaining theoretical knowledge
         "b": ["Flipped Classroom", "Enriched Virtual"],  # Developing practical skills
         "c": ["Station Rotation", "Face-to-Face Driver"]  # Preparing for exams or certifications
@@ -41,7 +46,7 @@ response_to_model_mapping = {
 # Function to recommend the most suitable blended learning model(s)
 def recommend_model(responses):
     # Validate input
-    if len(responses) != 7:
+    if len(responses) != 8:
         return "Error: Please provide exactly 7 responses (one for each question)."
 
     # Aggregate model recommendations
@@ -75,8 +80,9 @@ questions = [
     "How comfortable are you with technology?",
     "Does the content involve hands-on activities or labs?",
     "Is the subject theoretical or skills-based?",
-    "Does the content require real-time collaboration?",
-    "How important is flexibility?"
+    "Does the content require real-time collaboration with peers or instructors",
+    "What is your primary goal in using a blended learning approach?",
+    "How important is flexibility in your learning schedule?"
 ]
 
 options = [
@@ -86,7 +92,8 @@ options = [
     ["a) Yes", "b) No"],
     ["a) Mostly theoretical", "b) Mostly skills-based"],
     ["a) Frequently", "b) Occasionally", "c) Rarely"],
-    ["a) Gaining theoretical knowledge", "b) Developing practical skills", "c) Preparing for exams or certifications"]
+    ["a) Gaining theoretical knowledge", "b) Developing practical skills", "c) Preparing for exams or certifications"],
+    ["a) Very important", "b) Somewhat important", "c) Not important"]
 ]
 
 # Collect user responses
