@@ -71,7 +71,7 @@ def recommend_model(responses):
     return recommended_models
 
 # Streamlit UI
-st.title("Blended Learning Model Recommendation System")
+st.title("Assessment for selecting Blended Learning Adaption")
 
 # Questions and options
 questions = [
